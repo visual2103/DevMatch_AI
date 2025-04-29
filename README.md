@@ -1,4 +1,4 @@
-<img width="1183" alt="image" src="https://github.com/user-attachments/assets/8e5a1ab8-38ba-4c8a-b7c2-dfbe478848ca" /># DevMatch AI
+# DevMatch AI
 
 **DevMatch AI** is an intelligent talent allocation system that automatically matches developers to projects based on their skills, industry experience, and project requirements. Built with Python and leveraging machine learning and NLP techniques, it ensures optimal candidate selection and increases matchmaking accuracy.
 
