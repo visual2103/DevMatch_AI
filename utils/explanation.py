@@ -13,7 +13,6 @@ if not openai_key:
 client = OpenAI(api_key=openai_key)
 
 
-
 def generate_explanation_with_llm_job_to_cv(cv_filename, domain_score, skills_score, matching_score, matched_skills, domain_selected):
     explanation_prompt = f"""
 You are an AI system helping in matching developers to jobs.
