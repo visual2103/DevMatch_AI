@@ -1,11 +1,14 @@
 from openai import OpenAI
 import os
+openai_key = st.secrets["openai_api_key"]
+client = OpenAI(api_key=openai_key)
 from dotenv import load_dotenv
 
 load_dotenv()
 print("Loaded key:", os.getenv("OPENAI_API_KEY"))
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+openai_key = st.secrets["openai_api_key"]
+client = OpenAI(api_key=openai_key)
 
 def generate_explanation_with_llm_job_to_cv(cv_filename, domain_score, skills_score, matching_score, matched_skills, domain_selected):
     explanation_prompt = f"""
