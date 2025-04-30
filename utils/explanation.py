@@ -4,12 +4,13 @@ import streamlit as st
 from dotenv import load_dotenv
 
 load_dotenv()
-openai_key = st.secrets["OPENAI_API_KEY"]
+
+openai_key = st.secrets.get("openai_api_key") or os.getenv("OPENAI_API_KEY")
 if not openai_key:
-    st.error("OpenAI API key not found. Define openai_api_key in st.secrets.toml or OPENAI_API_KEY in .env.")
+    st.error("OpenAI API key not found. Define it in secrets.toml or in .env")
     st.stop()
+
 client = OpenAI(api_key=openai_key)
-print("Loaded key:", os.getenv("OPENAI_API_KEY"))
 
 
 
